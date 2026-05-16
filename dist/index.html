@@ -1757,19 +1757,22 @@
     @media (max-width: 1024px) {
       .activities-grid { grid-template-columns: repeat(2, 1fr); }
       .footer-top { grid-template-columns: 1fr 1fr; }
+      .nav { display: none; }
+      .header-cta { display: none; }
+      .hamburger { display: flex; }
     }
 
     @media (max-width: 768px) {
       .section { padding: 72px 0; }
-      .nav { display: none; }
-      .header-cta { display: none; }
-      .hamburger { display: flex; }
 
-      .hero { padding: 100px 0 60px; }
-      .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+      .hero { padding: 88px 0 52px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+      .hero h1 { font-size: 1.875rem; }
+      .hero h1 > span { white-space: normal; }
+      .hero-actions { flex-direction: column; }
+      .hero-actions .btn { width: 100%; justify-content: center; }
       .discord-mockup { order: -1; }
       .hero-image-wrap { order: -1; }
-      /* 1カラム時: (vw - padding) / 13.5文字 */
 
       .pain-grid { grid-template-columns: 1fr; }
       .about-inner { grid-template-columns: 1fr; }
@@ -1788,12 +1791,13 @@
       .footer-bottom { flex-direction: column; align-items: flex-start; }
 
       .dc-sidebar { display: none; }
+
+      .cta-section h2 { font-size: 1.75rem; white-space: normal; }
     }
 
     @media (max-width: 480px) {
       .activities-grid { grid-template-columns: 1fr; }
-      .hero-actions { flex-direction: column; }
-      .hero-actions .btn { width: 100%; justify-content: center; }
+      .hero h1 { font-size: 1.6rem; }
       .admin-stats { grid-template-columns: 1fr; }
     }
   </style>
@@ -2783,8 +2787,15 @@
   }
 
   function fitAllTitles() {
-    fitSingleLine(document.querySelector('.hero h1'), 'span');
-    fitSingleLine(document.querySelector('.cta-section h2'));
+    const h1 = document.querySelector('.hero h1');
+    const ctaH2 = document.querySelector('.cta-section h2');
+    if (window.innerWidth <= 768) {
+      if (h1) h1.style.fontSize = '';
+      if (ctaH2) ctaH2.style.fontSize = '';
+      return;
+    }
+    fitSingleLine(h1, 'span');
+    fitSingleLine(ctaH2);
   }
 
   fitAllTitles();
