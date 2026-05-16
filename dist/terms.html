@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>利用規約｜コミュニティ運営ラボ</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Noto Sans JP', 'Inter', sans-serif;
+      background: #ffffff;
+      color: #0F172A;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    :root {
+      --blue-600: #2563FF;
+      --blue-50: #EAF2FF;
+      --navy: #0F172A;
+      --gray-600: #475569;
+      --gray-100: #F1F5F9;
+      --white: #FFFFFF;
+      --gradient: linear-gradient(135deg, #2563FF 0%, #4F8CFF 100%);
+    }
+
+    /* Header */
+    .header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(15,23,42,0.07);
+      padding: 0 24px;
+    }
+    .header-inner {
+      max-width: 1120px; margin: 0 auto;
+      height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 800; font-size: 1rem; color: var(--navy);
+    }
+    .logo-icon {
+      width: 34px; height: 34px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-weight: 700; border-radius: 100px;
+      cursor: pointer; transition: all 0.2s; border: none;
+      font-family: inherit;
+    }
+    .btn-primary {
+      background: var(--gradient); color: #fff;
+      padding: 10px 22px; font-size: 0.85rem;
+    }
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    /* Page Layout */
+    .page-hero {
+      background: var(--gray-100);
+      padding: 60px 24px 48px;
+      text-align: center;
+    }
+    .page-hero h1 {
+      font-size: 1.75rem; font-weight: 800;
+      color: var(--navy); margin-bottom: 8px;
+    }
+    .page-hero .updated {
+      font-size: 0.82rem; color: var(--gray-600);
+    }
+    .breadcrumb {
+      font-size: 0.8rem; color: var(--gray-600);
+      margin-bottom: 16px;
+    }
+    .breadcrumb a { color: var(--blue-600); }
+    .breadcrumb a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 800px; margin: 0 auto;
+      padding: 64px 24px 96px;
+    }
+
+    .policy-section {
+      margin-bottom: 48px;
+    }
+    .policy-section h2 {
+      font-size: 1.1rem; font-weight: 800;
+      color: var(--navy);
+      padding-left: 14px;
+      border-left: 3px solid var(--blue-600);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+    .policy-section p {
+      font-size: 0.92rem; line-height: 1.9;
+      color: var(--gray-600); margin-bottom: 12px;
+    }
+    .policy-section ul {
+      list-style: disc; padding-left: 24px;
+    }
+    .policy-section ul li {
+      font-size: 0.92rem; line-height: 1.9;
+      color: var(--gray-600); margin-bottom: 4px;
+    }
+    .policy-intro {
+      font-size: 0.92rem; line-height: 1.9;
+      color: var(--gray-600); margin-bottom: 48px;
+      padding: 20px 24px;
+      background: var(--blue-50);
+      border-radius: 12px;
+    }
+    .prohibited-box {
+      background: #FFF5F5;
+      border: 1px solid #FECACA;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-top: 8px;
+    }
+    .prohibited-box ul {
+      list-style: none; padding-left: 0;
+    }
+    .prohibited-box ul li {
+      font-size: 0.92rem; line-height: 1.9;
+      color: #7F1D1D; margin-bottom: 4px;
+      padding-left: 20px; position: relative;
+    }
+    .prohibited-box ul li::before {
+      content: '✕';
+      position: absolute; left: 0;
+      color: #EF4444; font-weight: 700;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--navy);
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .footer-copy {
+      font-size: 0.8rem; color: rgba(255,255,255,0.4);
+      margin-bottom: 12px;
+    }
+    .footer-links {
+      display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;
+    }
+    .footer-links a {
+      font-size: 0.8rem; color: rgba(255,255,255,0.5);
+    }
+    .footer-links a:hover { color: #fff; }
+
+    @media (max-width: 768px) {
+      .page-hero h1 { font-size: 1.4rem; }
+      .header-cta { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon"><img src="images/logo.png" alt="コミュニティ運営ラボ" width="34" height="34" /></div>
+      コミュニティ運営ラボ
+    </a>
+    <a href="https://forms.gle/z3faMoaNqGpUfQi58" class="btn btn-primary header-cta" target="_blank" rel="noopener noreferrer">
+      無料で参加する →
+    </a>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="breadcrumb">
+    <a href="index.html">ホーム</a> &rsaquo; 利用規約
+  </div>
+  <h1>利用規約</h1>
+  <p class="updated">最終更新日：2025年5月11日</p>
+</div>
+
+<div class="container">
+
+  <p class="policy-intro">
+    本利用規約（以下「本規約」）は、コミュニティ運営ラボ（以下「当コミュニティ」）が提供するDiscordコミュニティおよびウェブサイト（以下「本サービス」）の利用条件を定めるものです。参加申し込みをもって、本規約に同意いただいたものとみなします。
+  </p>
+
+  <div class="policy-section">
+    <h2>第1条　サービス概要</h2>
+    <p>コミュニティ運営ラボは、オンラインサロン・Discord・スクール・イベントなどのコミュニティを運営している方、または立ち上げを検討している方を対象とした、無料のDiscordコミュニティです。</p>
+    <p>参加者同士の情報交換・横のつながり・コラボ・クロスセルの機会創出を目的として運営されています。</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>第2条　参加資格</h2>
+    <p>本サービスへの参加は、以下の条件をすべて満たす方に限ります。</p>
+    <ul>
+      <li>コミュニティ（オンラインサロン・Discord・スクール・イベント等）を現在運営している方、または立ち上げを検討している方</li>
+      <li>本規約および当コミュニティのルールに同意できる方</li>
+      <li>営利目的での勧誘・営業活動を行わないことに同意できる方</li>
+    </ul>
+    <p>上記条件を満たさないと判断した場合、運営側の判断により参加をお断りまたは退会いただく場合があります。</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>第3条　禁止事項</h2>
+    <p>参加者は、本サービスの利用において以下の行為を行ってはなりません。</p>
+    <div class="prohibited-box">
+      <ul>
+        <li>他のメンバーへの営業活動・勧誘・マルチ商法・MLMへの勧誘</li>
+        <li>コミュニティオーナーへの商品・サービスの売り込み</li>
+        <li>誹謗中傷・差別・ハラスメントに該当する発言</li>
+        <li>スパム・無関係な広告の投稿</li>
+        <li>他者の個人情報の無断収集・公開</li>
+        <li>虚偽の情報・なりすましによる参加</li>
+        <li>著作権・商標権等の知的財産権を侵害する行為</li>
+        <li>法令または公序良俗に反する行為</li>
+        <li>その他、運営が不適切と判断する行為</li>
+      </ul>
+    </div>
+    <p style="margin-top:16px;">禁止事項に違反した場合、警告なしに即退会処分とする場合があります。</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>第4条　入会特典（Discordハーネス）</h2>
+    <p>参加者には、Discord運営を効率化する管理テンプレート「Discordハーネス」を入会特典として無料配布しています。</p>
+    <p>本特典は予告なく内容の変更・配布終了となる場合があります。また、配布したテンプレートの第三者への転売・無断配布は禁止します。</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>第5条　知的財産権</h2>
+    <p>本サービス上のコンテンツ（テキスト・画像・デザイン等）の著作権は、運営または正当な権利者に帰属します。</p>
+    <p>参加者が本サービス内に投稿したコンテンツの著作権は投稿者本人に帰属しますが、当コミュニティはサービス運営・改善・広報目的での利用を無償で許諾いただけるものとします。</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>第6条　免責事項</h2>
+    <p>当コミュニティは、本サービスの利用に関して生じた参加者間のトラブル・損害について、一切の責任を負いません。</p>
+    <p>本サービスは現状有姿で提供されるものであり、特定目的への適合性・完全性・継続性等を保証するものではありません。</p>
+    <p>システム障害・メンテナンス・Discordの仕様変更等により、サービスが一時的に利用できない場合があります。これによる損害について、当コミュニティは責任を負いません。</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>第7条　サービスの変更・終了</h2>
+    <p>当コミュニティは、運営上の都合により本サービスの内容変更・一時停止・終了を行う場合があります。その際、可能な限り事前に参加者へお知らせします。</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>第8条　規約の改定</h2>
+    <p>当コミュニティは、必要に応じて本規約を改定する場合があります。改定後の規約は本ページへの掲載をもって効力を生じるものとし、改定後も本サービスを継続利用された場合は、改定後の規約に同意いただいたものとみなします。</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>第9条　準拠法・管轄</h2>
+    <p>本規約の解釈は日本法に準拠します。本サービスに関する紛争については、東京地方裁判所を第一審の専属的合意管轄裁判所とします。</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>第10条　お問い合わせ</h2>
+    <p>本規約に関するお問い合わせは、下記までご連絡ください。</p>
+    <p>メールアドレス：<a href="mailto:contact@community-lab.jp" style="color:var(--blue-600);">contact@community-lab.jp</a></p>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-copy">© 2025 コミュニティ運営ラボ. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="terms.html">利用規約</a>
+    <a href="privacy-policy.html">プライバシーポリシー</a>
+    <a href="index.html">トップページ</a>
+  </div>
+</footer>
+
+</body>
+</html>
