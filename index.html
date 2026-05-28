@@ -891,10 +891,9 @@
       pointer-events: none;
     }
     .harness-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
       position: relative;
       z-index: 1;
     }
@@ -902,6 +901,9 @@
       background: rgba(37,99,255,0.2);
       color: #7EB0FF;
       border: 1px solid rgba(37,99,255,0.25);
+    }
+    .harness .sec-eyebrow.left {
+      justify-content: center;
     }
     .harness h2 {
       font-size: clamp(1.75rem, 3vw, 2.25rem);
@@ -1817,7 +1819,7 @@
     <nav class="nav">
       <a href="#about">コミュニティについて</a>
       <a href="#activities">活動内容</a>
-      <a href="#harness">Discordハーネス</a>
+      <a href="#harness">LPテンプレート</a>
       <a href="#members">メンバー紹介</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -1839,7 +1841,7 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="#about" onclick="closeMobileMenu()">コミュニティについて</a>
   <a href="#activities" onclick="closeMobileMenu()">活動内容</a>
-  <a href="#harness" onclick="closeMobileMenu()">Discordハーネス</a>
+  <a href="#harness" onclick="closeMobileMenu()">LPテンプレート</a>
   <a href="#members" onclick="closeMobileMenu()">メンバー紹介</a>
   <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
   <a href="https://forms.gle/z3faMoaNqGpUfQi58" class="btn btn-primary" target="_blank" rel="noopener noreferrer" onclick="closeMobileMenu()">無料でDiscordに参加する →</a>
@@ -2085,7 +2087,7 @@
 </section>
 
 <!-- ========================================
-     HARNESS
+     BONUS TEMPLATE
 ======================================== -->
 <section class="section harness" id="harness">
   <div class="container">
@@ -2095,55 +2097,12 @@
       <div>
         <div class="sec-eyebrow left fade-in" style="color:#7EB0FF;"><span class="sec-eyebrow-slash" style="color:#7EB0FF;">＼</span> BONUS <span class="sec-eyebrow-slash" style="color:#7EB0FF;">／</span></div>
         <h2 class="fade-in fade-in-delay-1">
-          参加者限定で<br /><em>「Discordハーネス」</em>を<br />無料プレゼント。
+          参加者限定で<br /><em>コミュニティ運営特化LPテンプレート</em>を<br />無料プレゼント。
         </h2>
         <p class="harness-desc fade-in fade-in-delay-2">
-          Discordハーネスは、Discord Botを活用してコミュニティ運営業務を効率化するシステムです。メッセージの予約投稿・イベント管理・メンバー通知など、手作業で行っていた運営タスクを自動化。コミュニティ運営ラボへの参加者限定で、入会特典として無料プレゼントしています。
+          コミュニティ運営特化LPテンプレートは、コミュニティの魅力・活動内容・参加導線をわかりやすく伝えるためのLP雛形です。コミュニティ運営ラボへの参加者限定で、入会特典として無料プレゼントしています。
         </p>
-        <p class="harness-note fade-in fade-in-delay-2">※ Discordハーネスをご自身のコミュニティに導入するには、Claude CodeなどのAIコーディングツールを使ってDiscordサーバーとの連携設定が必要です。</p>
-        <div class="harness-features fade-in fade-in-delay-3">
-          <div class="harness-feature">
-            <div class="harness-feature-icon">👥</div>
-            <div class="harness-feature-text">メンバー管理</div>
-          </div>
-          <div class="harness-feature">
-            <div class="harness-feature-icon">🏷️</div>
-            <div class="harness-feature-text">ロール管理</div>
-          </div>
-          <div class="harness-feature">
-            <div class="harness-feature-icon">🤖</div>
-            <div class="harness-feature-text">自動案内</div>
-          </div>
-          <div class="harness-feature">
-            <div class="harness-feature-icon">🔔</div>
-            <div class="harness-feature-text">イベント通知</div>
-          </div>
-          <div class="harness-feature">
-            <div class="harness-feature-icon">✨</div>
-            <div class="harness-feature-text">AI活用導線</div>
-          </div>
-          <div class="harness-feature">
-            <div class="harness-feature-icon">📊</div>
-            <div class="harness-feature-text">コミュニティ分析</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right: Harness Image in Browser Mockup -->
-      <div class="fade-in fade-in-delay-2">
-        <div class="browser-mockup">
-          <div class="browser-bar">
-            <div class="browser-dots">
-              <span class="browser-dot dot-red"></span>
-              <span class="browser-dot dot-yellow"></span>
-              <span class="browser-dot dot-green"></span>
-            </div>
-            <div class="browser-url">Discordハーネス · 投稿管理</div>
-          </div>
-          <div class="browser-body">
-            <img src="images/harness.png" alt="Discordハーネス 管理画面" />
-          </div>
-        </div>
+        <p class="harness-note fade-in fade-in-delay-2">※ LPテンプレートを使用するには、GitHubからテンプレートをクローンしてご利用いただく必要があります。</p>
       </div>
 
     </div>
@@ -2694,7 +2653,7 @@
         <div class="footer-links">
           <a href="#about">コミュニティについて</a>
           <a href="#activities">活動内容</a>
-          <a href="#harness">Discordハーネス</a>
+          <a href="#harness">LPテンプレート</a>
           <a href="#members">メンバー紹介</a>
           <a href="#faq">FAQ</a>
         </div>
